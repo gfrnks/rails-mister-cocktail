@@ -1,0 +1,16 @@
+<h1>/cocktails/:id/show</h1>
+
+<p><%= @cocktail.name %></p>
+<ul>
+  <% @cocktail.doses.each do |dose| %>
+    <li>
+      <%= dose.description %>
+      <%= dose.ingredient.name %>
+    </li>
+  <% end %>
+</ul>
+<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+<h6><%= link_to("create a dose", new_cocktail_dose_path(@cocktail)) %></h6>
+<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+<h2><%= link_to("back", cocktails_path) %></h2>
+<h2><%= link_to("create a cocktail", new_cocktail_path) %></h2>
