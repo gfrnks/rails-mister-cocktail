@@ -1,17 +1,33 @@
-<h1>/cocktails/:id/show</h1>
+<div class="flex-wrapper">
 
-<p><%= @cocktail.name %></p>
-<ul>
-  <% @cocktail.doses.each do |dose| %>
-    <li>
-      <%= dose.description %>
-      <%= dose.ingredient.name %>
-      <%= link_to("delete", dose_path(dose), method: :delete) %>
-    </li>
-  <% end %>
-</ul>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
-<h6><%= link_to("create a dose", new_cocktail_dose_path(@cocktail)) %></h6>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
-<h2><%= link_to("back", cocktails_path) %></h2>
-<h2><%= link_to("create a cocktail", new_cocktail_path) %></h2>
+  <div class="container">
+
+    <div class="header">
+      <h3>/cocktails/:id/show</h3>
+    </div>
+
+    <div class="left-side"></div>
+
+    <div class="body-content">
+      <p><%= @cocktail.name %></p>
+      <ul>
+        <% @cocktail.doses.each do |dose| %>
+          <li>
+            <%= dose.description %>
+            <%= dose.ingredient.name %>
+            <%= link_to("delete", dose_path(dose), method: :delete) %>
+          </li>
+        <% end %>
+      </ul>
+
+      <h6><%= link_to("create a dose", new_cocktail_dose_path(@cocktail)) %></h6>
+    </div>
+
+    <div class="right-side"></div>
+
+    <div class="footer">
+      <h3><%= link_to("back", cocktails_path) %></h3>
+      <h3><%= link_to("create a cocktail", new_cocktail_path) %></h3>
+    </div>
+  </div>
+</div>
