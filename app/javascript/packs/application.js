@@ -10,3 +10,25 @@
 import 'bootstrap';
 
 console.log('Hello World from Webpacker')
+
+// let gradient = document.querySelector(".flex-wrapper")
+
+const cursorFunction = (event) => {
+  let x = event.screenX
+  let y = event.screenY
+  let degree = x * y
+  // console.log(degree)
+  return degree
+};
+
+
+document.addEventListener("mousemove", (event) => {
+  let gradient = document.querySelector(".flex-wrapper");
+  gradient.setAttribute("style", `background-image: linear-gradient(${cursorFunction(event)}deg, pink, white);`)
+  // console.log(gradient)
+});
+
+
+
+
+
