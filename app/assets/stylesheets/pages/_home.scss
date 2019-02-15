@@ -5,26 +5,29 @@
   justify-content: space-around;
   align-items: center;
   height: 100vh;
+  background-image: linear-gradient(45deg, pink, $light-gray);
 }
+
 
 .container {
   flex: 0 1 auto;
   width: 80%;
+  background: $pink;
   display: grid;
   grid-template-columns: 15% auto 15%;
   grid-template-rows: 25% auto 25%;
   grid-column-gap: 5px;
   grid-row-gap: 5px;
   padding: 20px;
-  box-shadow: 0px 1px 2px pink;
+  box-shadow: 1px 1px 3px $orange;
 }
 
 .header {
   grid-column: 1 / span 3 ;
   grid-row: 1 / span 1;
   text-align: center;
-  text-shadow: 1px 1px 2px pink;
-  color: $light-gray;
+  text-shadow: 1px 1px 2px $orange;
+  color: $pink;
 }
 
 .body-content {
@@ -33,9 +36,10 @@
   padding: 20px;
   text-align: center;
   a {
+    color: rgba(230, 126, 34,0.8);
     text-decoration: none;
     &:hover {
-      text-shadow: 5px 5px 10px;
+      color: rgba(230, 126, 34,0.9);
     }
   }
 }
@@ -55,10 +59,10 @@
   grid-row: 3 / span 1;
   text-align: center;
   padding-bottom: 25px;
-  text-shadow: 1px 1px 2px pink;
-  color: $light-gray;
+  text-shadow: 1px 1px 2px $orange;
+  color: $pink;
   a {
     text-decoration: none;
-    color: $light-gray;
+    color: $pink;
   }
 }

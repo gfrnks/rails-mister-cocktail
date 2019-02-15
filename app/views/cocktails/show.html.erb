@@ -10,15 +10,16 @@
 
     <div class="body-content">
       <p><%= @cocktail.name %></p>
-      <ul>
         <% @cocktail.doses.each do |dose| %>
-          <li>
+          <p>
             <%= dose.description %>
             <%= dose.ingredient.name %>
-            <%= link_to("delete", dose_path(dose), method: :delete) %>
-          </li>
+            <%= link_to(dose_path(dose), method: :delete) do %>
+              <i class="far fa-trash-alt"></i>
+            <% end %>
+
+          </p>
         <% end %>
-      </ul>
 
       <h6><%= link_to("create a dose", new_cocktail_dose_path(@cocktail)) %></h6>
     </div>
