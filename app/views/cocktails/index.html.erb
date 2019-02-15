@@ -1,9 +1,24 @@
-<h1>/cocktails</h1>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
-<ul>
-  <% @cocktails.each do |cocktail| %>
-    <li><%= link_to(cocktail.name, cocktail_path(cocktail.id)) %></li>
-  <% end %>
-</ul>
-<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
-<h2><%= link_to("create a cocktail", new_cocktail_path) %></h2>
+
+
+<div class="container">
+
+  <div class="header">
+    <h1>/cocktails</h1>
+  </div>
+
+  <div class="left-side"></div>
+
+  <div class="body-content">
+    <ul>
+      <% @cocktails.each do |cocktail| %>
+        <li><%= link_to(cocktail.name, cocktail_path(cocktail.id)) %></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="right-side"></div>
+
+  <div class="footer">
+    <h2><%= link_to("create a cocktail", new_cocktail_path) %></h2>
+  </div>
+</div>
