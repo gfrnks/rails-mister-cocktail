@@ -16,8 +16,13 @@ console.log('Hello World from Webpacker')
 const cursorFunction = (event) => {
   let x = event.screenX
   let y = event.screenY
-  let degree = x * y
+
+  // let degree = x * y
   // console.log(degree)
+
+  let tan = Math.atan2(y,x);
+  let degree = tan * (180 / Math.PI)
+
   return degree
 };
 
